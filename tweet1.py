@@ -35,8 +35,19 @@ files_1000 = [s for s in files if '1000terms' in s]
 #全ファイルからキーワードと順位を抜き出す
 for f in files_1000:
     terms(f)
-    
-print(seq)
+
+#キーワードを取り出す(結果:5150単語)
+#for mykey in seq.keys():
+#    print(mykey)
+
+#キーワードと値のペアを取り出す
+for mykey, myvalue in seq.items():
+    print(mykey,end="\t")
+    for value in myvalue:
+#        print(value)
+        print(",".join(map(str,value)),end="\t")
+    print("")
+#print(seq)
 
     
     
